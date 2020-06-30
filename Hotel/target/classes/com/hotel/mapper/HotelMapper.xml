@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <mapper namespace="com.hotel.mapper.HotelMapper">
+  
+	<select id="getCheck" resultType="com.hotel.VO.HotelVO">
+		select * from hotel where room = #{room}
+	</select>
+	
+	<insert id="insertCheck" parameterType="com.hotel.VO.HotelVO">
+  		insert into hotel(room,checkIn,checkOut) values (#{room},#{checkIn},#{checkOut})
+  	
+  	</insert>
+
+  </mapper>

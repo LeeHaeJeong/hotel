@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace ="com.hotel.mapper.CustomerMapper">
+
+<insert id="insert">
+
+  	insert into customer
+  	(
+  		name,
+  		title,
+  		content,
+  		phone_number,
+  		address,
+  		modified,
+  		del_chk
+  	)
+  	values (
+  	 #{name},
+  	 #{title},
+  	 #{content},
+  	 #{phone_number},
+  	 #{address},
+  	 now(),
+  	 'N'
+  	)
+  	
+  	
+</insert>
+  
+
+  	<select id ="getList" resultType="com.hotel.VO.CustomerVO">
+  		
+  		<!-- <![CDATA[]]>는 sql구문을 넣는곳이다. -->
+
+  			select * from customer
+  		
+
+  	</select>
+  	<select id="selectBoardList" resultType="hashmap" parameterType="hashmap">
+    <![CDATA[
+        SELECT
+            *
+        FROM
+            customer
+        WHERE
+            DEL_CHK = 'N'
+        ORDER BY ID DESC
+        LIMIT #{pageStart}, #{perPageNum}
+    ]]>
+	</select>
+
+
+  	<update id="update">
+  	
+  		update customer set 
+  		name = #{name},
+  		title = #{title},
+  		content = #{content},
+  		last_modified = now()
+  		
+  		where id = #{id} 
+  		
+  	</update>
+  	<select id="getId" resultType="com.hotel.VO.CustomerVO">
+  	
+  		
+  		select * from customer where id=#{id}
+  	</select>
+  	
+  	<update id="delete">
+  	
+  		update customer set
+  		del_chk="Y"
+  		where id=#{id}
+  		
+  	</update>
+  	
+  	
+  	</mapper>

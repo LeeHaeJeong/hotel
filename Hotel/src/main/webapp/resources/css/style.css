@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#za {
+	color: white;
+	font-size: 17px;
+	}
+	
+#zz {
+	background-color: black;
+	}
+.container1{
+ 	float: left;
+}
+.container2{
+	float: right;
+}
+#big3 {
+	color: orange;	
+}
+#bi1{
+	color: #800080;
+}
+.paginate_button>a {
+	border: 5px;
+	margin: 15px;
+}
+
+	
