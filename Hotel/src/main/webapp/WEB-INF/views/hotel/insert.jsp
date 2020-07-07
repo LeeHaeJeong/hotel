@@ -29,4 +29,17 @@
         <button type="submit" class="btn btn-info">등록하기</button>
         <button type="button" class="btn btn-secondary">목록으로</button>   
     </form>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var formObj =$("form");
+    $("button[type='button']").on("click",function(e){
+        e.preventDefault();
+    formObj.attr("action",'/hotel/list').attr("method","get");     
+    formObj.submit();
+
+    });          
+});
+
+</script>
 <%@include file="../includes/footer.jsp"%>
