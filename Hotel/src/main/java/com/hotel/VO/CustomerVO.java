@@ -22,9 +22,9 @@ public class CustomerVO {
 	
 	private String address;
 	
-	private String content;
-	
 	private String title;
+	
+	private String content;
 	
 	private LocalDateTime modified;
 	

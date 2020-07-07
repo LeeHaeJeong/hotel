@@ -7,9 +7,7 @@ import com.hotel.VO.CriteriaVO;
 import com.hotel.VO.CustomerVO;
 
 public interface CustomerService {
-	
-	public List<CustomerVO> getList();
-	
+		
 	List<Map<String, Object>> selectBoardList(CriteriaVO cri);
 
 	public CustomerVO getId(Long id);

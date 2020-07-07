@@ -1,5 +1,4 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%> 
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Footer -->
     <footer class="page-footer font-small unique-color-dark">
 
@@ -86,6 +85,7 @@
                     <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
                         <a href="/hotel/list">고객문의</a>
+                        <!-- 클릭시 리스트 페이지로 url 연결  --> 
                     </p>
                     <p>
                         <a href="#!">서비스 아카데미</a>
@@ -120,7 +120,7 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">
-            <a href="https://mdbootstrap.com/bootstrap-tutorial/"></a>
+         
         </div>
         <!-- Copyright -->
 

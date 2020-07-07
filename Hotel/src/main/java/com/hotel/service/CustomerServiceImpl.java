@@ -19,11 +19,6 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerMapper customer;
 
 	@Override
-	public List<CustomerVO> getList() {
-		return customer.getList();
-	}
-
-	@Override
 	public List<Map<String, Object>> selectBoardList(CriteriaVO cri) {
 		
 		return customer.selectBoardList(cri);

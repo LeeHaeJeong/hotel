@@ -9,28 +9,26 @@ import com.hotel.VO.HotelVO;
 import com.hotel.mapper.HotelMapper;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class HotelServiceImpl  implements HotelService {
 
 	@Setter(onMethod_= {@Autowired})
 	private HotelMapper hmapper;
 	
-
 	@Override
-	public List<HotelVO> getCheckService(String room) {
-		
+	public List<HotelVO> getCheckService(String room) {		
 		return hmapper.getCheck(room);
 	}
 
-
 	@Override
 	public void insertCheckService(HotelVO hotel) {
-		hmapper.insertCheck(hotel);
-		
+		hmapper.insertCheck(hotel);		
 	}
 
 }

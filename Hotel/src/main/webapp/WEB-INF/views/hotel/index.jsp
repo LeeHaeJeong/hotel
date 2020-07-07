@@ -80,17 +80,16 @@
             <hr class="my-5">
 
             <!--Section: Examples-->
+            
             <section id="roomtype" class="text-center">
-
                 <!-- Heading -->
                 <h2 class="mb-5 font-weight-bold">Room type</h2>
-
                 <!--Grid row-->
                 <div class="row">
 
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-4">
-					<a href="reservation?room=Single">
+					<a href="#">
                         <div class="view overlay z-depth-1-half">
                             <img src="../../resources/img/single.jpg" width="700" height="500" >
                             <div class="mask rgba-white-slight"></div>
@@ -98,10 +97,10 @@
                         <h4 class="my-4 font-weight-bold">Single room</h4>
                         <p class="grey-text">1인실입니다. 풀 사이즈 베드가 제공됩니다.</p>
                     </a>
-
                     </div>
+                    
                     <!--Grid column-->
-
+                    
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-6 mb-4">
 					<a href="#">
@@ -305,18 +304,10 @@
 
             <!--Section: Contact-->
             <section id="companyintro">
-
-                     
-                        <!--Grid row-->
-
-                        <!--Google map-->
-                        
-
-                
-                <!--Grid row-->
-
+            </section>                
+            <section id="list">
             </section>
-            <!--Section: Contact-->
+
 	</div> <!--  container -->
     </main>
     <!--Main layout-->
@@ -324,20 +315,22 @@
  <script>
  var room = ["single","double","twin","triple","connecting","suite"];
 	$view = $("section#roomtype a");
-	console.log($view);
+	
 	$(document).ready(function(){
-		console.log($view);
+		
 		$.each($view,function(i,j){
-			//console.log($(j).find("p").text());
+			
 			$(j).click(function(){
-				console.log($(j).find("p").text());
-				 var result = "reservation?room="+room[i] +"&text="+ $(j).find("p").text();
-				console.log(result);					
-				$(j).attr("href",result); 				
-			});
-		})
-	});
+				//console.log($(j).find("p").text()); 텍스트 제대로 찾아지는지 확인
+				
+				//get으로 room 타입별의 text 넘겨받음
+				var result = "reservation?room="+room[i] +"&text="+ $(j).find("p").text();
+				//console.log(result); 결과 값 확인					
+				$(j).attr("href",result);//result 값 href키로 하이퍼 링크  				
+			});//click 종료
+		}); //each문 종료
+	});//document 종료
 
-</script>
+ </script>
 
 <%@include file="../includes/footer.jsp"%>

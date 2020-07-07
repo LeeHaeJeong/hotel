@@ -20,14 +20,14 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="../../resources/css/style.css">
+<!-- Your custom styles (optional) -->
+<link rel="stylesheet" href="../../resources/css/style.css">
+<!-- datepicker & jquery stylesheet !! -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
+<link rel="stylesheet"
+	href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-</head>
-	<body>
-
-
-	
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -38,6 +38,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+
+
+</head>
+	<body>
+
+
+	
   
     <!--Main Navigation-->
     <header>
@@ -52,6 +63,7 @@
                        		<a class="nav-link" href="#" id="za">그린호텔</a>
                        	</li>
                      </c:if>
+                     
                      <c:if test="${m.equals('index')||m.equals('intro')}">
                         <li class="nav-item">
                             <a class="nav-link" href="#intro" id="za">호텔 소개</a>
@@ -71,6 +83,11 @@
                      <c:if test="${m.equals('index')||m.equals('companyintro')}">
                         <li class="nav-item">
                             <a class="nav-link" href="#companyintro" id="za">회사 소개</a>
+                        </li>
+                     </c:if>   
+                     <c:if test="${m.equals('index')||m.equals('list')}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#list" id="za">고객 문의</a>
                         </li>
                      </c:if>   
                         

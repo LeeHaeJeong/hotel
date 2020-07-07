@@ -40,6 +40,8 @@
   		
 
   	</select>
+  	
+  	
   	<select id="selectBoardList" resultType="hashmap" parameterType="hashmap">
     <![CDATA[
         SELECT
